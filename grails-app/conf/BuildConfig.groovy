@@ -23,11 +23,14 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
     }
+    plugins {
+        compile ":maven-publisher:0.8.1"
+    }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         // runtime 'mysql:mysql-connector-java:5.1.13'
-        compile ('com.googlecode.flyway:flyway-core:1.4.1') {
+        compile ('com.googlecode.flyway:flyway-core:2.2.1') {
             //export = false
             transitive = false
             excludes([group: 'org.springframework'],
